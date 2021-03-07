@@ -52,13 +52,16 @@ const deleteNote = (id) =>
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
-
   if (activeNote.id) {
+    // If you wanted the option to edit already existing notes you would delete or comment out the next 2 lines.
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
     noteText.value = activeNote.text;
   } else {
+    // Added the following 2 lines to fix a bug where you couldn't edit a new note afer viewing an existing note.
+    noteTitle.readOnly = false;
+    noteText.readOnly = false;
     noteTitle.value = '';
     noteText.value = '';
   }

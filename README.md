@@ -81,10 +81,10 @@ There is a deployed version of this application. Just navigate to the URL to see
 To use this application type the following command into your terminal/command prompt (after installing it):
 
 ```
-nodemon
+npm start
 ```
 
-Once nodemon is installed navigate to http://localhost:3030/ to see the app in action.
+Once the local server is running navigate to http://localhost:3030/ to see the app in action.
 
 This is a demo of the finished application:
 
